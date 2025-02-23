@@ -96,6 +96,20 @@ The Michigan Imaginary Energy Assistant provides a robust set of features design
 - The **LangChain SQL agent** executes queries against the database, while the **vector retriever** fetches semantically relevant documents.
 - The system prioritizes structured data first and enhances it with unstructured document insights.
 
+### Retrieval Tool Details
+- The **retriever tool** is responsible for extracting relevant information from both structured and unstructured data sources.
+- For structured data, the `multi_table(query)` function leverages the **LangChain SQL agent** to execute SQL queries across multiple tables in SQLite.
+- For unstructured data, `retriever.get_relevant_documents(query)` fetches semantically similar documents using **ChromaDB**.
+- The results from both retrieval methods are combined to generate a holistic response to user queries.
+- This dual approach ensures that responses are both factually accurate from structured data and contextually rich from unstructured knowledge sources.
+
+### Agent Decision Flow
+![Agent Decision Flow](flow_diagram.png)
+
+- The diagram represents how user input is processed by the LLM.
+- If the input requires a tool, the agent chooses between the `retriever_tool` and `ticket_creation_tool`.
+- If no tool is needed, the response is generated directly.
+
 ### Interacting with the Q&A System
 - Users can submit natural language queries through the Streamlit UI.
 - The system automatically determines whether to query the SQL database or retrieve vector-based knowledge.
