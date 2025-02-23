@@ -114,9 +114,10 @@ The Michigan Imaginary Energy Assistant provides a robust set of features design
 - Users can submit natural language queries through the Streamlit UI.
 - The system automatically determines whether to query the SQL database or retrieve vector-based knowledge.
 - Example queries:
-  - *“What are the specifications of the solar panel model X?”*
-  - *“Show me energy efficiency tips.”*
-  - *“Retrieve ticket #1234.”*
+    - "I need assistance with solar panel installation"
+    - "Retrieve all current tickets and all information" 
+    - "What are our current energy offers?"
+    - "What is the difference between the Green Energy Plan and Fixed-Rate Plan?"
 
 ### Ticket Creation Workflow
 - Users can submit a request for support via the interface.
@@ -132,7 +133,8 @@ The Michigan Imaginary Energy Assistant provides a robust set of features design
 
 ### Query Execution
 - Queries can retrieve information from both SQL and vector databases.
-- Support tickets are stored in `energy_products.db`.
+- Support tickets are stored in `energy_products.db`
+
 
 ## Deliverables
 The project source code is available in a GitHub repository or a zipped folder containing:
@@ -146,4 +148,6 @@ The project source code is available in a GitHub repository or a zipped folder c
   - Ticket creation and tracking workflows.
 
 For any additional troubleshooting or modifications, refer to the documentation or reach out to the development team.
+
+
 
